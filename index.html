@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Cycle Tour Brochure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        .brochure-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            transform-origin: left;
+            animation: unfold 1.5s ease-in-out;
+        }
+        .page {
+            background-color: white;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .page.visible {
+            opacity: 1;
+        }
+        h1, h2 {
+            color: #2e3d49;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #4a4a4a;
+        }
+        .highlight {
+            color: #e65a2d;
+            font-weight: bold;
+        }
+        .tour-stop {
+            margin-bottom: 30px;
+        }
+        .tour-stop img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .animate-content {
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        @keyframes unfold {
+            0% {
+                transform: scaleX(0);
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="brochure-container">
+        <!-- Page 1 -->
+        <div class="page visible">
+            <h1>🌍 Explore the Ultimate Adventure: The Rock Cycle Tour! 🌋</h1>
+            <p>Pack your bags and get ready for a once-in-a-lifetime geological journey through Earth’s dynamic rock cycle! From fiery beginnings to majestic mountains, this tour has it all!</p>
+        </div>
+
+        <!-- Page 2: Igneous Island -->
+        <div class="page animate-content visible tour-stop">
+            <h2>🧨 Stop 1: Igneous Island – Born of Fire!</h2>
+            <p>Welcome to Igneous Island, where the adventure erupts from beneath the Earth's crust! Watch molten magma cool into solid rock—either above ground as lava or deep below as intrusive igneous rock. Witness volcanic fireworks and hike across freshly formed landscapes!</p>
+            <img src="https://www.earthmagazine.org/sites/earthmagazine.org/files/styles/medium/public/2023-01/Volcanic-activity.jpg?itok=gfHXPb-i" alt="Lava Flow">
+            <ul>
+                <li>Lava flow hikes</li>
+                <li>Magma chamber tours</li>
+                <li>Rock formation viewing decks</li>
+            </ul>
+        </div>
+
+        <!-- Page 3: Sedimentary Shore -->
+        <div class="page animate-content visible tour-stop">
+            <h2>🌊 Stop 2: Sedimentary Shore – Layers of Time!</h2>
+            <p>Next, we drift into the peaceful Sedimentary Shore. Here, erosion, weathering, and compression turn tiny grains and fossils into beautiful, layered rocks. Each layer tells a story—like pages in Earth’s diary!</p>
+            <img src="https://www.nps.gov/common/uploads/structured_data/3C7B5C5A-1DD8-B71B-0B599FBFD183F528.jpg" alt="Sedimentary Rocks">
+            <ul>
+                <li>Fossil digging</li>
+                <li>Sandstone sculpting</li>
+                <li>Ancient seabed snorkeling</li>
+            </ul>
+        </div>
+
+        <!-- Page 4: Metamorphic Mountains -->
+        <div class="page animate-content visible tour-stop">
+            <h2>⛰️ Stop 3: Metamorphic Mountains – Pressure and Power!</h2>
+            <p>Feel the heat and pressure rise as we trek through Metamorphic Mountains, where rocks are transformed under intense conditions. See sedimentary and igneous rocks morph into something entirely new—tougher, denser, and full of character.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Metamorphic_rock.jpg/400px-Metamorphic_rock.jpg" alt="Metamorphic Rocks">
+            <ul>
+                <li>Rock metamorphosis simulation</li>
+                <li>High-altitude adventure trails</li>
+                <li>Geothermal spas</li>
+            </ul>
+        </div>
+
+        <!-- Page 5: The Cycle Never Ends -->
+        <div class="page animate-content visible">
+            <h2>🔄 The Cycle Never Ends!</h2>
+            <p>Just like your desire for adventure, the rock cycle keeps moving. Melting, cooling, weathering, compacting, and transforming—it's a journey with no final stop. You can ride it again and again!</p>
+        </div>
+
+        <!-- Page 6: Contact Information -->
+        <div class="page animate-content visible">
+            <h2>🧭 Book Now!</h2>
+            <p>Discover the hidden stories of Earth’s surface and beyond. The Rock Cycle Tour is the vacation that rocks—literally!</p>
+            <p>🌐 Visit: <a href="http://www.rockcycletour.earth" target="_blank">www.rockcycletour.earth</a></p>
+            <p>📞 Call: 1-800-ROX-TRIP</p>
+        </div>
+
+        <!-- Page 7: Bibliography -->
+        <div class="page animate-content visible">
+            <h2>📚 Bibliography</h2>
+            
+            <ul>
+                <li>National Park Service (2023). <i>Geology: Sedimentary, Metamorphic, and Igneous Rocks</i>.</li>
+                <li>USGS (2022). <i>Understanding the Rock Cycle</i>.</li>
+                <li>ScienceDirect (2021). <i>Metamorphic Rocks: Formation and Transformation</i>.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
